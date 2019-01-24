@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "max-size": "node --max-old-space-size=4076 server.js",
+    "run-dev": "nodemon server.js",
+    "dev": "npm run max-size &  npm run run-dev"
   },
   "author": "Alex",
   "license": "ISC",
